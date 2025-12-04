@@ -2,7 +2,7 @@
 
 <h5 align="center"> 
 
-[<img src="https://img.shields.io/badge/arXiv-Paper-red.svg?logo=arxiv">](https://arxiv.org/abs/2511.22433)
+[<img src="https://img.shields.io/badge/arXiv-Paper-red.svg?logo=arxiv">](https://arxiv.org/abs/2509.23760)
 [![GitHub](https://img.shields.io/badge/GitHub-Code-green?logo=github)](https://github.com/glimmer16/UniAlignment)
 [![HuggingFace](https://img.shields.io/badge/🤗%20Model-Huggingface-yellow)](https://huggingface.co/TencentARC/TokLIP)
 [<img src="https://img.shields.io/badge/License-MIT-B762C1?logo=open-source-initiative&logoColor=white">](/LICENSE)
