@@ -14,12 +14,14 @@
 
 </div>
 
+<img src="./assets//UniAlignment.png" alt="UniAlignment" style="zoom:50%;" />
+
 ### Abstract
 > The remarkable success of diffusion models in text-to-image generation has sparked growing interest in expanding their capabilities to a variety of multi-modal tasks, including image understanding, manipulation, and perception. These tasks require advanced semantic comprehension across both visual and textual modalities, especially in scenarios involving complex semantic instructions. However, existing approaches often rely heavily on vision-language models (VLMs) or modular designs for semantic guidance, leading to fragmented architectures and computational inefficiency. To address these challenges, we propose UniAlignment, a unified multimodal generation framework within a single diffusion transformer. UniAlignment introduces a dual-stream diffusion training strategy that incorporates both intrinsicmodal semantic alignment and cross-modal semantic alignment, thereby enhancing the model’s cross-modal consistency and instruction-following robustness. Additionally, we present SemGen-Bench, a new benchmark specifically designed to evaluate multimodal semantic consistency under complex textual instructions. Extensive experiments across multiple tasks and benchmarks demonstrate that UniAlignment outperforms existing baselines, underscoring the significant potential of diffusion models in unified multimodal generation.
 
 ## 👀 Introduction
 
-<img src="./assets//UniAlignment.png" alt="UniAlignment" style="zoom:50%;" />
+<img src="./assets//Pipeline.png" alt="Pipeline" style="zoom:50%;" />
 
 - We introduce UniAlignment, a unified multimodal generative model based on **a single Diffusion Transformer**, demonstrating outstanding performance while maintaining lightweight design and computational efficiency.
 
