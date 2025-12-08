@@ -19,19 +19,19 @@
 
 ## 👀 Introduction
 
-<img src="./docs//TokLIP.png" alt="TokLIP" style="zoom:50%;" />
+<img src="./assets//UniAlignment.png" alt="UniAlignment" style="zoom:50%;" />
 
-- We introduce UniAlignment, a visual tokenizer that enhances comprehension by **semanticizing** vector-quantized (VQ) tokens and **incorporating CLIP-level semantics** while enabling end-to-end multimodal autoregressive training with standard VQ tokens.
+- We introduce UniAlignment, a unified multimodal generative model based on **a single Diffusion Transformer**, demonstrating outstanding performance while maintaining lightweight design and computational efficiency.
 
-- TokLIP integrates a low-level discrete VQ tokenizer with a ViT-based token encoder to capture high-level continuous semantics.
+- UniAlignment introduces **two complementary semantic alignment mechanisms** that significantly enhances image-text semantic consistency and instruction-following robustness.
 
-- Unlike previous approaches (e.g., VILA-U) that *discretize high-level features*, TokLIP **disentangles training objectives for comprehension and generation**, allowing the direct application of advanced VQ tokenizers without the need for tailored quantization operations.
+- A rigorous new benchmark **SemGen-Bench** is constructed for evaluating multimodal semantic alignment under complex, compositional instructions, establishing a highstandard baseline for future research.
 
 ## 🔜 TODOs
 - [x] Technical report.
+- [ ] Release training codes and pretrained weights.
+- [ ] Release inference codes.
 - [ ] Release SemGen-Bench.
-- [] Release training codes and pretrained weights.
-- [] Release inference codes.
 
 ## 🔧 Installation
 
@@ -44,6 +44,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+## ⚙️ Usage
 ### Training
 
 1. Please refer to
@@ -62,7 +63,7 @@ python inference.py --model-config 'ViT-SO400M-16-SigLIP2-384-toklip' --pretrain
 ```
 
 ## 🙏 Acknowledgement
-This repo is mainly based on [DualDiffusion](https://github.com/zijieli-Jlee/Dual-Diffusion). We also refer to [SD3](https://stability.ai/news/stable-diffusion-3-medium).
+This repo is mainly based on [DualDiffusion](https://github.com/zijieli-Jlee/Dual-Diffusion) and [SD3](https://stability.ai/news/stable-diffusion-3-medium).
 
 Thanks to the original authors for their excellent work!
 
