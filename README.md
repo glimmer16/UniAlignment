@@ -4,6 +4,7 @@
 
 [<img src="https://img.shields.io/badge/arXiv-Paper-red.svg?logo=arxiv">](https://arxiv.org/abs/2509.23760)
 [![GitHub](https://img.shields.io/badge/GitHub-Code-green?logo=github)](https://github.com/glimmer16/UniAlignment)
+[![HuggingFace](https://img.shields.io/badge/🤗%20Model-Huggingface-yellow)](https://huggingface.co/glimmer16/UniAlignment)
 [<img src="https://img.shields.io/badge/License-MIT-B762C1?logo=open-source-initiative&logoColor=white">](/LICENSE)
 <!--[![HuggingFace](https://img.shields.io/badge/🤗%20Model-Huggingface-yellow)](https://huggingface.co/TencentARC/TokLIP)-->
 
@@ -33,9 +34,9 @@
 
 ## 🔜 TODOs
 - [x] Technical report.
-- [ ] Release training codes and pretrained weights.
-- [ ] Release inference codes.
-- [ ] Release SemGen-Bench.
+- [x] Release training codes and pretrained weights.
+- [x] Release inference codes.
+- [x] Release SemGen-Bench.
 
 ## 🔧 Installation
 
@@ -50,24 +51,62 @@ pip install -r requirements.txt
 
 ## ⚙️ Usage
 
-coming soon.
-<!--### Training
+### Model Weight
 
-1. Please refer to
+The pre-trained checkpoints can be downloaded through the following link: https://huggingface.co/glimmer16/UniAlignment
 
 ### Data
 
-111
+The dataset should be organized into a JSONL file in the following format (using ShareGPT-4o as an example):
+
+T2I Data:
+
+```python
+{
+  "dataset": "ShareGPT4o-Image",
+  "image": ["image/8483.png"],
+  "conversations": [
+                      {"from": "human", "value": "In a compelling medium close-up shot..."},
+                      {"from": "gpt", "value": "<image>"}
+                    ],
+  "img_w": [1024], "img_h": [1024]
+}
+```
+
+TI2I Data:
+
+```python
+{
+  "dataset": "ShareGPT4o-Image",
+  "image": ["image/v2v_9693.png", "image/v2v_9692.png"],
+  "conversations": [
+                      {"from": "human", "value": "A stunning view of the Sydney Opera House at sunset..."},
+                      {"from": "gpt", "value": ""}
+                    ],
+  "img_w": [1024, 1024], "img_h": [1024, 1024],
+  "instruction": "Change the image by replacing the tiny house on wheels with a boat floating close to the Sydney Opera House."
+}
+```
+
+
+### Training
+
+Download the SD3-medium checkpoint for training: [SD3](https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers).
+
+Train UniAlignment using the scripts `train_unialignment.sh`. You can change the config in `configs/config_unnify.py`.
+
+```shell
+bash train_unialignment.sh
+```
 
 ### Inference
 
-We provide the inference example in `src/inference.py`. 
+We provide the inference example in `inference.py`. 
 
 ```shell
-cd src
-python inference.py --model-config 'ViT-SO400M-16-SigLIP2-384-toklip' --pretrained 'YOUR_TOKLIP_PATH'
+python inference.py
 ```
--->
+
 
 ## 🙏 Acknowledgement
 This repo is mainly based on [DualDiffusion](https://github.com/zijieli-Jlee/Dual-Diffusion) and [SD3](https://stability.ai/news/stable-diffusion-3-medium).
